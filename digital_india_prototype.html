@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital India | Citizen Services</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#12345a}
+button{cursor:pointer;border:0}
+.topbar{height:72px;background:#063a6b;color:white;display:flex;align-items:center;gap:28px;padding:0 22px}
+.logo{font-size:25px;font-weight:800;white-space:nowrap}
+.logo span{color:#ff7a00}.logo b{color:#39b54a}
+.tag{font-size:10px;color:#ddd;display:block;font-weight:normal}
+.search{flex:1;max-width:520px;background:white;color:#789;border-radius:10px;padding:13px 18px}
+.user{margin-left:auto;font-weight:bold}
+.layout{display:flex;min-height:calc(100vh - 72px)}
+.sidebar{width:245px;background:#06365f;color:white;padding:28px 16px}
+.nav{padding:14px 18px;margin:7px 0;border-radius:9px;cursor:pointer}
+.nav:hover,.nav.active{background:#2388ed}
+.side-bottom{margin-top:100px;text-align:center;font-size:18px}
+.side-bottom strong{font-size:24px}
+.main{flex:1;padding:24px;overflow:auto}
+.hero{min-height:235px;border-radius:14px;padding:34px;background:linear-gradient(110deg,#dff2ff,#fff5e9);position:relative;overflow:hidden}
+.hero:after{content:"🇮🇳";position:absolute;right:55px;top:45px;font-size:100px;opacity:.85}
+.hero h1{font-size:48px;color:#07509a}.hero h1 span{color:#f07800}.hero p{margin:12px 0;max-width:570px;line-height:1.6}
+.primary{background:#0878df;color:#fff;padding:12px 24px;border-radius:9px;font-weight:bold}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:20px 0}
+.card,.panel{background:#fff;border:1px solid #e2eaf2;border-radius:12px;padding:18px;box-shadow:0 2px 8px #0000000a}
+.card h3{font-size:16px;margin:10px 0}.card p{font-size:13px;color:#536d89;line-height:1.4}
+.card a{display:inline-block;margin-top:12px;color:#0878df;font-weight:bold;font-size:13px}
+.icon{font-size:25px}
+.grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:16px}
+.panel h2{font-size:17px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:14px;border:1px solid #e5edf5;border-radius:9px}.stat small{color:#647b94}.stat strong{display:block;font-size:22px;margin:5px 0}.up{color:#159447;font-size:12px}
+.bars{height:170px;display:flex;align-items:end;gap:14px;padding:10px 5px;border-bottom:1px solid #ddd}
+.bar{width:35px;background:#2689e8;border-radius:6px 6px 0 0;text-align:center;color:white;font-size:10px;padding-top:4px}
+.services div,.activity div{padding:10px 0;border-bottom:1px solid #edf1f5;font-size:13px}
+.activity{margin-top:16px}.badge{float:right;padding:4px 9px;border-radius:12px;background:#d9f5e3;color:#18723b;font-size:11px}
+.promo{background:#07509a;color:white}.promo button{margin-top:14px;background:white;color:#07509a;padding:10px 16px;border-radius:8px;font-weight:bold}
+footer{text-align:center;padding:18px;color:#687d94;font-size:12px}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.sidebar{width:190px}}
+@media(max-width:700px){.topbar{height:auto;padding:14px;flex-wrap:wrap}.search{order:3;flex-basis:100%;max-width:none}.sidebar{display:none}.main{padding:14px}.cards,.grid{grid-template-columns:1fr}.hero h1{font-size:36px}.hero:after{font-size:60px;right:20px}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Digital <span>India</span><small class="tag">Connect · Innovate · Grow</small></div>
+  <input class="search" placeholder="🔍  Search services, schemes, or anything..." id="search">
+  <div>🔔 <sup>3</sup></div>
+  <div class="user">👤 Welcome, User⌄</div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="nav active">🏠 &nbsp; Dashboard</div>
+  <div class="nav">🧩 &nbsp; Services</div>
+  <div class="nav">📋 &nbsp; Schemes</div>
+  <div class="nav">📄 &nbsp; Applications</div>
+  <div class="nav">👤 &nbsp; Profile</div>
+  <div class="nav">🔔 &nbsp; Notifications <b style="float:right;background:#ff4d5e;padding:3px 7px;border-radius:20px">3</b></div>
+  <div class="nav">❓ &nbsp; Help & Support</div>
+  <div class="nav">⚙️ &nbsp; Settings</div>
+  <div class="side-bottom"><strong>Digital India</strong><br><i>for a</i><br><b style="color:#ff7900">Better</b> <b style="color:#39b54a">Tomorrow</b></div>
+</aside>
+
+<main class="main">
+<section class="hero">
+  <h1>Digital <span>India</span></h1>
+  <h3>Empowering Citizens &nbsp;|&nbsp; Enabling Innovation &nbsp;|&nbsp; Building a Digital Future</h3>
+  <p>Access government services, explore schemes, apply online and be a part of Digital India.</p>
+  <button class="primary" onclick="alert('Welcome to Digital India!')">Get Started →</button>
+</section>
+
+<section class="cards">
+  <div class="card"><div class="icon">🏛️</div><h3>Government Services</h3><p>Access various e-services online</p><a href="#">Explore →</a></div>
+  <div class="card"><div class="icon">🏠</div><h3>Schemes & Benefits</h3><p>Find and apply for welfare schemes</p><a href="#">View Schemes →</a></div>
+  <div class="card"><div class="icon">📝</div><h3>Apply Online</h3><p>Submit your applications quickly</p><a href="#">Start Now →</a></div>
+  <div class="card"><div class="icon">🔎</div><h3>Track Status</h3><p>Check your application status</p><a href="#">Track →</a></div>
+  <div class="card"><div class="icon">💬</div><h3>Grievance</h3><p>Raise a complaint or provide feedback</p><a href="#">Register →</a></div>
+</section>
+
+<section class="grid">
+  <div class="panel"><h2>Quick Statistics</h2><div class="stats">
+    <div class="stat"><small>👤 Total Users</small><strong>12,843</strong><span class="up">↑ 12%</span></div>
+    <div class="stat"><small>📄 Applications</small><strong>8,421</strong><span class="up">↑ 18%</span></div>
+    <div class="stat"><small>✅ Schemes</small><strong>125</strong><span class="up">↑ 7%</span></div>
+    <div class="stat"><small>🏛️ Services</small><strong>56</strong><span class="up">↑ 10%</span></div>
+  </div></div>
+
+  <div class="panel"><h2>Service Usage</h2><div class="bars">
+    <div class="bar" style="height:55%">10k<br>Jan</div><div class="bar" style="height:68%">12k<br>Feb</div>
+    <div class="bar" style="height:60%">11k<br>Mar</div><div class="bar" style="height:78%">14k<br>Apr</div>
+    <div class="bar" style="height:55%">10k<br>May</div><div class="bar" style="height:68%">12k<br>Jun</div>
+  </div></div>
+
+  <div class="panel"><h2>Popular Services</h2><div class="services">
+    <div>🆔 Aadhaar Services <b>›</b></div><div>💳 PAN Card <b>›</b></div>
+    <div>🗳️ Voter ID <b>›</b></div><div>🛂 Passport Services <b>›</b></div><div>🚗 Driving Licence <b>›</b></div>
+  </div></div>
+</section>
+
+<section class="panel activity"><h2>Recent Activity <a href="#" style="float:right;color:#0878df;font-size:12px">View All →</a></h2>
+  <div><b>2025-09-08</b> &nbsp; Aadhaar Update <span class="badge">Completed</span></div>
+  <div><b>2025-09-07</b> &nbsp; Scholarship Application <span class="badge" style="background:#fff0c9;color:#9b7200">Under Review</span></div>
+  <div><b>2025-09-06</b> &nbsp; PAN Card Apply <span class="badge" style="background:#dbeeff;color:#176bb5">Submitted</span></div>
+  <div><b>2025-09-05</b> &nbsp; Driving Licence <span class="badge">Approved</span></div>
+</section>
+
+<section class="panel promo" style="margin-top:16px"><h2>Go Digital. Go Smart.</h2><p>Access all government services from your mobile.</p><button>Download App</button></section>
+<footer>© 2025 Digital India. All Rights Reserved. &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms &nbsp; | &nbsp; Help</footer>
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.nav').forEach(item=>{
+  item.addEventListener('click',()=>{
+    document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+document.getElementById('search').addEventListener('input',e=>{
+  const q=e.target.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = !q || c.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
